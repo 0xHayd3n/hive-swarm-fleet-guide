@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "For research claims, cite Justin Bennington's v1 paper in preferred-citation. This is an independent reading guide."
+title: "Hive, Swarm, Fleet Reading Guide"
+authors:
+  - name: "0xHayd3n"
+    website: "https://github.com/0xHayd3n"
+version: "1.0.0"
+date-released: "2026-10-20"
+url: "https://github.com/0xHayd3n/hive-swarm-fleet-guide"
+repository-code: "https://github.com/0xHayd3n/hive-swarm-fleet-guide"
+license: "CC-BY-4.0"
+abstract: "Source-grounded explanation of a proposed authority taxonomy, documentation-based classifications and reported simulation, with complete paper map and explicit evidence limits. No experiment reproduction."
+keywords:
+  - reading-guide
+  - multi-agent-systems
+  - command-structures
+  - distributed-systems
+preferred-citation:
+  type: report
+  title: "Hive, Swarm, Fleet: Where execution command stops: repairing a taxonomy of multi-agent command structures"
+  authors:
+    - given-names: "Justin"
+      family-names: "Bennington"
+      affiliation: "Somewhere Systems"
+  year: 2026
+  date-published: "2026-10-17"
+  version: "v1"
+  institution:
+    name: "Somewhere Systems"
+  url: "https://somewhere.systems/research/hive-swarm-fleet"
+  notes: "Working paper v1, 11 pages."
+

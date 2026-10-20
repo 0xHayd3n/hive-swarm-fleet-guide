@@ -1,0 +1,25 @@
+name: Validate reading guide
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the exact revision
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Check repository integrity offline
+        run: python scripts/validate_repository.py
+      - name: Install citation validation dependencies
+        run: python -m pip install PyYAML==6.0.2 jsonschema==4.23.0
+      - name: Validate citation against official schema
+        run: python scripts/validate_citation.py --download-schema

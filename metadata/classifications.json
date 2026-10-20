@@ -1,0 +1,387 @@
+{
+  "schema_version": "1.0.0",
+  "title": "Author classifications from Table 1",
+  "source_version": "v1",
+  "evidence_status": "author_classifications_not_independently_recoded",
+  "counts": {
+    "agree": 12,
+    "misclassified": 3,
+    "undecidable": 7
+  },
+  "classifications": [
+    {
+      "id": "CL01",
+      "row": 1,
+      "system": "Hermes delegate_task",
+      "repaired_locus": "hive, depth 1",
+      "lifecycle": "parent session",
+      "initial_verdict": "agree",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL02",
+      "row": 2,
+      "system": "cloudsound launchd agents",
+      "repaired_locus": "fleet of singleton nodes; integrator acceptance governance",
+      "lifecycle": "launchd",
+      "initial_verdict": "undecidable",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL03",
+      "row": 3,
+      "system": "Four DGX Sparks, static roles",
+      "repaired_locus": "agent organisation not established",
+      "lifecycle": "operator",
+      "initial_verdict": "misclassified",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL04",
+      "row": 4,
+      "system": "Anthropic Research",
+      "repaired_locus": "hive, depth 1",
+      "lifecycle": "lead agent",
+      "initial_verdict": "agree",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL05",
+      "row": 5,
+      "system": "Claude Code subagents",
+      "repaired_locus": "hive, depth 1",
+      "lifecycle": "main session",
+      "initial_verdict": "agree",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL06",
+      "row": 6,
+      "system": "AutoGen group chat",
+      "repaired_locus": "hive; manager picks speaker",
+      "lifecycle": "application",
+      "initial_verdict": "agree",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL07",
+      "row": 7,
+      "system": "CAMEL role-playing",
+      "repaired_locus": "hive of 2",
+      "lifecycle": "application",
+      "initial_verdict": "agree",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL08",
+      "row": 8,
+      "system": "MetaGPT",
+      "repaired_locus": "leaderless swarm with fixed SOP",
+      "lifecycle": "application",
+      "initial_verdict": "agree",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL09",
+      "row": 9,
+      "system": "ChatDev",
+      "repaired_locus": "sequence of 2-agent hives",
+      "lifecycle": "application",
+      "initial_verdict": "undecidable",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL10",
+      "row": 10,
+      "system": "CrewAI sequential",
+      "repaired_locus": "hive rooted in orchestration code",
+      "lifecycle": "application",
+      "initial_verdict": "misclassified",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL11",
+      "row": 11,
+      "system": "CrewAI hierarchical",
+      "repaired_locus": "hive, depth 1",
+      "lifecycle": "application",
+      "initial_verdict": "agree",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL12",
+      "row": 12,
+      "system": "Nested LangGraph supervisor",
+      "repaired_locus": "hive, depth at least 2",
+      "lifecycle": "application",
+      "initial_verdict": "undecidable",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL13",
+      "row": 13,
+      "system": "LangGraph swarm",
+      "repaired_locus": "leaderless swarm, handoff",
+      "lifecycle": "application",
+      "initial_verdict": "agree",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL14",
+      "row": 14,
+      "system": "Agents SDK agents as tools",
+      "repaired_locus": "hive, depth 1",
+      "lifecycle": "application",
+      "initial_verdict": "agree",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL15",
+      "row": 15,
+      "system": "OpenAI Swarm handoffs",
+      "repaired_locus": "leaderless swarm, handoff",
+      "lifecycle": "application",
+      "initial_verdict": "agree",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL16",
+      "row": 16,
+      "system": "Contract net",
+      "repaired_locus": "leaderless swarm",
+      "lifecycle": "not supplied",
+      "initial_verdict": "agree",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL17",
+      "row": 17,
+      "system": "Hearsay-II",
+      "repaired_locus": "hive rooted at scheduler",
+      "lifecycle": "system",
+      "initial_verdict": "misclassified",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL18",
+      "row": 18,
+      "system": "Ant colony / ACO",
+      "repaired_locus": "leaderless swarm",
+      "lifecycle": "self",
+      "initial_verdict": "agree",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL19",
+      "row": 19,
+      "system": "Raft cluster",
+      "repaired_locus": "elected swarm",
+      "lifecycle": "operator",
+      "initial_verdict": "undecidable",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL20",
+      "row": 20,
+      "system": "PROSA",
+      "repaired_locus": "swarm with advisory hub",
+      "lifecycle": "plant",
+      "initial_verdict": "undecidable",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL21",
+      "row": 21,
+      "system": "Army detailed command",
+      "repaired_locus": "hive; depth equals echelons",
+      "lifecycle": "institution",
+      "initial_verdict": "undecidable",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    },
+    {
+      "id": "CL22",
+      "row": 22,
+      "system": "Army mission command",
+      "repaired_locus": "fleet of fleets",
+      "lifecycle": "institution",
+      "initial_verdict": "undecidable",
+      "evidence_status": "author_documentation_based_classification",
+      "sources": [
+        {
+          "section": "6; Table 1",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        }
+      ],
+      "caveat": "Configuration-specific author interpretation; not independently recoded or validated against deployed behaviour."
+    }
+  ]
+}

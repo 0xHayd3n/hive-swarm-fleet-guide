@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "title": "Hive, Swarm, Fleet",
+  "subtitle": "Where execution command stops: repairing a taxonomy of multi-agent command structures",
+  "authors": [
+    {
+      "name": "Justin Bennington",
+      "given": "Justin",
+      "family": "Bennington",
+      "affiliation": "Somewhere Systems"
+    }
+  ],
+  "year": 2026,
+  "version": "v1",
+  "version_date": "2026-10-17",
+  "publication_status": "Working paper v1",
+  "page_count": 11,
+  "page_convention": "One-based PDF positions equal printed pages 1–11.",
+  "doi": null,
+  "record_url": "https://somewhere.systems/research/hive-swarm-fleet",
+  "pdf_url": "https://somewhere.systems/research/hive-swarm-fleet.pdf",
+  "contribution_type": "Proposed taxonomy repair with logical counterexamples, documentation-based classifications and author-reported discrete-event simulations.",
+  "license": {
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "evidence_url": "https://somewhere.systems/research/hive-swarm-fleet",
+    "checked_on": "2026-10-20"
+  },
+  "provenance": {
+    "primary_source": "User-supplied Library attachment",
+    "attachment_filename": "Bennington-2026-Hive-Swarm-Fleet.pdf",
+    "attachment_size_bytes": 377437,
+    "attachment_sha256": "b1d36d628a4d9c65ec026fc0533a13f9a8300b29067b5b6d5d99348b03bb943e",
+    "attachment_binary_downloaded": true,
+    "attachment_public_binary_equality_verified": true,
+    "public_pdf_url": "https://somewhere.systems/research/hive-swarm-fleet.pdf",
+    "public_pdf_sha256": "b1d36d628a4d9c65ec026fc0533a13f9a8300b29067b5b6d5d99348b03bb943e",
+    "full_text_read": true,
+    "extracted_lines_read": 580,
+    "visual_pdf_pages_checked": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "checked_on": "2026-10-20",
+    "limits": [
+      "Author hsf package, raw results, preregistration, deviation log, full classification evidence and initial-definitions artifact were not obtained.",
+      "No experiments executed or independent recoding of all 22 cases.",
+      "Selected accessible framework code inspected statically at current pinned snapshots; no deployed framework executions.",
+      "No bibliography-wide independent primary-source verification."
+    ]
+  },
+  "source_inventory": {
+    "numbered_sections": 9,
+    "figures": 5,
+    "tables": 2,
+    "numbered_equations": 0,
+    "formula_spans": "Unnumbered definitions in §§1–4, E-empty statement in §6, simulation parameters/statistics in §7.",
+    "appendices": 0,
+    "bibliography_entries": 37,
+    "references_pdf_pages": [
+      10,
+      11
+    ]
+  },
+  "companion": {
+    "repository_url": "https://github.com/0xHayd3n/hive-swarm-fleet-guide",
+    "maintainer": "0xHayd3n",
+    "prepared_with": "AI assistance",
+    "prepared_on": "2026-10-20",
+    "version_scope": "v1 only",
+    "original_material_license": "CC-BY-4.0",
+    "experiments_run": false,
+    "implementation_reproduced": false,
+    "theory_empirically_validated": false,
+    "official_affiliation": false,
+    "author_endorsement_claimed": false,
+    "paper_pdf_included": false
+  }
+}

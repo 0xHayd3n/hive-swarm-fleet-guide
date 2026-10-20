@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.0.0",
+  "claims": [
+    {
+      "id": "T01",
+      "kind": "proposed_definition",
+      "statement": "Execution, governance, lifecycle, and communication answer distinct authority questions.",
+      "scope": "A unit and interval under §4's definitions.",
+      "caveat": "These are proposed operational distinctions, not automatically observable from message traces.",
+      "sources": [
+        {
+          "section": "4.1",
+          "page": 2,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=2"
+        },
+        {
+          "section": "4.1",
+          "page": 3,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "id": "T02",
+      "kind": "proposed_definition",
+      "statement": "Hive command reaches from a unique original root through the unit; fleet execution command is bounded by each node's local unit.",
+      "scope": "Selected boundary and time interval.",
+      "caveat": "Disjointness, node/unit coverage and connected coordination are additional fleet requirements.",
+      "sources": [
+        {
+          "section": "4.2",
+          "page": 3,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "id": "T03",
+      "kind": "proposed_definition",
+      "statement": "A swarm's filtered command graph is edgeless; qualifying conferred, member-revocable, term-bounded leader edges are removed.",
+      "scope": "Conjunction of all authority-origin conditions.",
+      "caveat": "An elected swarm may still use an operational dispatcher; E and D are different graphs.",
+      "sources": [
+        {
+          "section": "4.1–4.2",
+          "page": 3,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "id": "T04",
+      "kind": "logical_counterexample",
+      "statement": "The initial taxonomy has eight identified defects and permits multiple permanent dispatchers under its swarm rule.",
+      "scope": "Author's audit of his original proposal.",
+      "caveat": "This comparison does not prove the repair is the only coherent taxonomy.",
+      "sources": [
+        {
+          "section": "3",
+          "page": 2,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "kind": "logical_counterexample",
+      "statement": "Command, communication, ownership and lifecycle are logically separable through constructed contrasts.",
+      "scope": "Four named axes.",
+      "caveat": "Logical separability does not establish statistical independence or lack of real-world correlation.",
+      "sources": [
+        {
+          "section": "4.3",
+          "page": 3,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=3"
+        },
+        {
+          "section": "4.3",
+          "page": 4,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "id": "C01",
+      "kind": "author_classification",
+      "statement": "The initial rule agrees on 12 of 22 configurations, misclassifies 3 and cannot decide 7.",
+      "scope": "Author-selected documentation/paper/source-based cases.",
+      "caveat": "Revised labels are the author's comparison target; no independent deployment census or full evidence recoding by this guide.",
+      "sources": [
+        {
+          "section": "6",
+          "page": 5,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=5"
+        },
+        {
+          "section": "6",
+          "page": 6,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "kind": "author_classification",
+      "statement": "The selected published production LLM architectures are described as depth-1 hives.",
+      "scope": "Restricted to the configurations and architecture disclosures in Table 1.",
+      "caveat": "Do not generalise this observation to all production systems or every use of a framework.",
+      "sources": [
+        {
+          "section": "6",
+          "page": 6,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "id": "S01",
+      "kind": "reported_simulation",
+      "statement": "All seven base structures report throughput 11.69 below saturation.",
+      "scope": "n=16, load 0.7, one-way latency 0.05, 200 seeds per condition.",
+      "caveat": "Arrival-limited equality is not equal maximum capacity or equal task quality.",
+      "sources": [
+        {
+          "section": "7.1–7.2; Table 2",
+          "page": 6,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "kind": "reported_simulation",
+      "statement": "Outage retention is HIVE 0.023 [0.022,0.024], FLEET 0.941 [0.933,0.950], elected swarm 0.996 [0.988,1.003].",
+      "scope": "50-unit simulated outage, ratio to preceding 50-unit throughput.",
+      "caveat": "Fleet spare capacity and model assumptions matter; ratio intervals can exceed one; no real LLM robustness measurement.",
+      "sources": [
+        {
+          "section": "7.2 H3",
+          "page": 7,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "kind": "reported_simulation",
+      "statement": "Contract net uses 15.38 [15.35,15.40] times a hive's messages/task; slope 1.946 [1.944,1.948] per added agent.",
+      "scope": "Implemented contract-net protocol and simulated conditions.",
+      "caveat": "Message counts do not measure token sizes, monetary expense or reasoning quality.",
+      "sources": [
+        {
+          "section": "7.2 H1–H2",
+          "page": 6,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "kind": "reported_simulation",
+      "statement": "H1 and H6 hold as reported, while H2–H5 hold only partly.",
+      "scope": "Author's registered decision rules as described in the PDF.",
+      "caveat": "The actual preregistration and deviation history were not acquired or independently verified.",
+      "sources": [
+        {
+          "section": "7.2",
+          "page": 6,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=6"
+        },
+        {
+          "section": "7.2",
+          "page": 7,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=7"
+        },
+        {
+          "section": "7.2",
+          "page": 8,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "kind": "reported_simulation_unregistered",
+      "statement": "Bounded hive dispatch loses capacity at high latency/load, and simultaneous auctions concentrate burst awards.",
+      "scope": "Two outstanding tasks/worker; stale concurrent bids in the specified implementation.",
+      "caveat": "These findings do not establish unavoidable properties of all hive or market protocols.",
+      "sources": [
+        {
+          "section": "7.2 H5 discussion",
+          "page": 7,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=7"
+        },
+        {
+          "section": "7.2 burst allocation",
+          "page": 8,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "id": "L01",
+      "kind": "author_limitation",
+      "statement": "The simulator abstracts agents to service times without reasoning errors, mandate misunderstanding or coordinator deliberation cost.",
+      "scope": "Model discussed in §9.",
+      "caveat": "Simulation supports mechanisms in this model; real LLM failures need different evaluation.",
+      "sources": [
+        {
+          "section": "9",
+          "page": 9,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "id": "P01",
+      "kind": "source_availability",
+      "statement": "The paper offers hsf, 13,800 run results, registration/deviation records and evidence from the author.",
+      "scope": "Data and code statement plus author landing page.",
+      "caveat": "Guide did not obtain these artifacts and claims no reproduction.",
+      "sources": [
+        {
+          "section": "Data and code",
+          "page": 10,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=10"
+        }
+      ]
+    },
+    {
+      "id": "G01",
+      "kind": "guide_interpretation",
+      "statement": "Classification should specify configuration, interval, authority evidence and analysis boundary before assigning a label.",
+      "scope": "Guide reading method built from §4 and §9.",
+      "caveat": "This is a guide recommendation, not the author's implemented trace inference system.",
+      "sources": [
+        {
+          "section": "4",
+          "page": 3,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=3"
+        },
+        {
+          "section": "9",
+          "page": 9,
+          "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf#page=9"
+        }
+      ]
+    }
+  ]
+}

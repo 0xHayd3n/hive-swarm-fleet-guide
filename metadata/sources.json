@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "inspected_on": "2026-10-20",
+  "sources": [
+    {
+      "id": "paper",
+      "kind": "primary_paper",
+      "url": "https://somewhere.systems/research/hive-swarm-fleet.pdf",
+      "version": "v1",
+      "date": "2026-10-17",
+      "use": "Complete 11-page reading, tables, figures, unnumbered mathematics, end matter.",
+      "verification": "Official PDF binary identical to supplied attachment; full text read and all pages visually inspected.",
+      "limits": "Reported experiments are not independently reproduced."
+    },
+    {
+      "id": "author-page",
+      "kind": "author_landing",
+      "url": "https://somewhere.systems/research/hive-swarm-fleet",
+      "use": "Title/version, CC BY 4.0, availability of author artifacts.",
+      "verification": "Read on 2026-10-20.",
+      "limits": "No direct artifact download located."
+    },
+    {
+      "id": "source-code-audit",
+      "kind": "inspection_register",
+      "local_path": "metadata/source-audit-notes.json",
+      "use": "Exact code commit/blob pins and accessible provider documents.",
+      "verification": "Three source files statically read; current snapshots explicitly distinguished from paper versions.",
+      "limits": "No framework execution or exhaustive independent classifications."
+    },
+    {
+      "id": "paper-bibliography",
+      "kind": "source_reference_register",
+      "local_path": "references/reading-list.md",
+      "use": "Navigation for all 37 bibliography entries.",
+      "verification": "Checked against PDF pp.10–11.",
+      "limits": "Not every original publication independently retrieved; source et al. lists are retained as incomplete."
+    },
+    {
+      "id": "workflow-reference",
+      "kind": "companion_structure",
+      "url": "https://github.com/0xHayd3n/system-0-1-2-3-guide",
+      "use": "Existing reading-guide structure and evidence workflow.",
+      "verification": "Read README/navigation/metadata/citation/check workflow.",
+      "limits": "This paper's prose and validator are original."
+    }
+  ],
+  "unavailable_artifacts": [
+    "hsf package",
+    "13,800 per-run results",
+    "PREREGISTRATION.md",
+    "DEVIATIONS.md",
+    "CLASSIFICATION.md",
+    "initial definitions / archived conversation"
+  ],
+  "experiments_reproduced": false
+}

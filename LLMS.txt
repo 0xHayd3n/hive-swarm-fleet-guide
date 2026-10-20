@@ -1,0 +1,31 @@
+# Hive, Swarm, Fleet Reading Guide
+
+Independent companion to Justin Bennington, Somewhere Systems, Working paper v1, 17 October 2026. 11 PDF pages, printed=PDF. Research credit belongs to Bennington.
+
+Start: README.md then AGENTS.md.
+Primary: https://somewhere.systems/research/hive-swarm-fleet.pdf
+Author page: https://somewhere.systems/research/hive-swarm-fleet
+Attachment/public SHA256: b1d36d628a4d9c65ec026fc0533a13f9a8300b29067b5b6d5d99348b03bb943e
+
+Human reading:
+- docs/01-motivation-and-audit.md: D1–D8, initial vs repaired taxonomy
+- docs/02-authority-and-taxonomy.md: E/G/L/C, filtered D, types and four axes
+- docs/03-classification-study.md: all 22 author-classified configurations
+- docs/04-simulation-results-and-limits.md: seven structures, H1–H6 and limits
+- docs/05-context-and-source-audit.md: related work, pinned static code audit
+- docs/06-paper-map.md: every source span, five figures, two tables, formula spans
+
+Structured reading:
+- metadata/paper.json
+- metadata/claims.json
+- metadata/results.json
+- metadata/classifications.json
+- metadata/sources.json
+- metadata/source-audit-notes.json
+
+Citations: CITATION.cff and references/paper.bib.
+Bibliography navigation: references/reading-list.md (37 source entries).
+Rights and checks: ATTRIBUTION.md, LICENSE, VERIFICATION.md.
+
+Keep proposed taxonomy, author classifications, reported simulation and guide interpretation separate. No hsf execution, raw-data audit, preregistration verification or independent 22-system recoding occurred. H1/H6 hold; H2–H5 mixed. Command != communication != governance != lifecycle. Preserve three figure-reference errors and reported numerical precision. Do not assert real-world robustness from simulated results.
+

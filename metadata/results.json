@@ -1,0 +1,602 @@
+{
+  "schema_version": "1.0",
+  "title": "Reported simulation results from Hive, Swarm, Fleet",
+  "paper_version": "Working paper v1",
+  "paper_date": "2026-10-17",
+  "author": "Justin Bennington",
+  "evidence_status": "author_reported_simulation_not_independently_reproduced",
+  "reproduced_by_guide": false,
+  "page_convention": "one_based_PDF_pages_equal_printed_pages",
+  "source_note": "Derived from the supplied 11-page attachment. This is a structured reading aid, not raw simulation data.",
+  "design": {
+    "source": {
+      "section": "7.1",
+      "pdf_pages": [
+        6
+      ]
+    },
+    "modeled_reasoning": false,
+    "workers": 16,
+    "worker_speeds": {
+      "distribution": "lognormal",
+      "median": 1,
+      "sigma": 0.3
+    },
+    "arrivals": {
+      "distribution": "Poisson",
+      "base_load_fraction": 0.7
+    },
+    "work": {
+      "distribution": "exponential",
+      "mean": 1
+    },
+    "run_duration": 400,
+    "warmup_discarded": 50,
+    "base_one_way_message_latency": 0.05,
+    "worker_failure_rate": 0.002,
+    "worker_downtime": 20,
+    "lost_task_detection_timeout": 5,
+    "common_random_numbers": true,
+    "seeds_per_condition": 200,
+    "reported_interval_method": "95% bootstrap confidence intervals over seeds; paired differences",
+    "outage": {
+      "start": 150,
+      "restart": 200,
+      "targets_described": [
+        "hive coordinator",
+        "elected leader",
+        "fleet node 0",
+        "random worker for structures without coordinator-like component"
+      ]
+    },
+    "reported_total_runs": 13800,
+    "total_runs_source": {
+      "section": "Data and code",
+      "pdf_pages": [
+        10
+      ]
+    },
+    "grid_reconciliation": "Attachment does not enumerate the complete grid sufficiently to independently reconstruct 13,800 runs.",
+    "preregistration_status": "Author reports prior commit, six post-smoke-run implementation clarifications, and one process slip. Guide has not independently verified history.",
+    "time_unit": "simulated_time_unit_without_real_world_calibration",
+    "message_cost": "count_of_coordination_messages_without_message_size_or_deliberation_cost"
+  },
+  "metrics": {
+    "base_sojourn": "Task time in system, simulated time units, base case.",
+    "messages_per_task": "Coordination message count per task, base case.",
+    "retention": "Throughput during coordinator outage divided by throughput in preceding 50 time units.",
+    "sojourn_loss": "Mean task time in system during coordinator-loss scenario.",
+    "makespan": "Time to complete a separate burst of 400 tasks present at time zero."
+  },
+  "table_2": {
+    "source": {
+      "section": "7.2",
+      "pdf_pages": [
+        6
+      ],
+      "table": 2
+    },
+    "reported_steady_state_throughput_for_each_structure": 11.69,
+    "means": [
+      {
+        "structure": "HIVE",
+        "base_sojourn": 1.18,
+        "messages_per_task": 2.01,
+        "retention": 0.023,
+        "sojourn_loss": 14,
+        "makespan": 28.7
+      },
+      {
+        "structure": "HIVE-2",
+        "base_sojourn": 1.34,
+        "messages_per_task": 4.02,
+        "retention": 0.026,
+        "sojourn_loss": 14.7,
+        "makespan": 29.1
+      },
+      {
+        "structure": "SWARM-CNP",
+        "base_sojourn": 1.41,
+        "messages_per_task": 30.9,
+        "retention": 0.997,
+        "sojourn_loss": 1.43,
+        "makespan": 76.3
+      },
+      {
+        "structure": "SWARM-STEAL",
+        "base_sojourn": 1.53,
+        "messages_per_task": 6.32,
+        "retention": 0.995,
+        "sojourn_loss": 1.56,
+        "makespan": 29.2
+      },
+      {
+        "structure": "SWARM-ELECT",
+        "base_sojourn": 1.21,
+        "messages_per_task": 2.02,
+        "retention": 0.996,
+        "sojourn_loss": 1.27,
+        "makespan": 28.7
+      },
+      {
+        "structure": "FLEET",
+        "base_sojourn": 1.81,
+        "messages_per_task": 3.06,
+        "retention": 0.941,
+        "sojourn_loss": 2.21,
+        "makespan": 30.7
+      },
+      {
+        "structure": "FLEET-LATERAL",
+        "base_sojourn": 1.53,
+        "messages_per_task": 3.28,
+        "retention": 0.959,
+        "sojourn_loss": 1.79,
+        "makespan": 28.3
+      }
+    ],
+    "confidence_interval_availability": "Most table intervals are not printed; paper points to results/hypotheses.md. Do not fabricate intervals."
+  },
+  "hypotheses": [
+    {
+      "id": "H1",
+      "author_verdict": "holds",
+      "source": {
+        "section": "7.2 H1",
+        "pdf_pages": [
+          6
+        ]
+      },
+      "reported": {
+        "cnp_to_hive_messages_ratio": {
+          "value": 15.38,
+          "ci_95": [
+            15.35,
+            15.4
+          ],
+          "unit": "ratio",
+          "source": {
+            "section": "7.2 H1",
+            "pdf_pages": [
+              6
+            ]
+          }
+        },
+        "relative_throughput_difference": {
+          "value": 0,
+          "ci_95": [
+            -0.0001,
+            0.0001
+          ],
+          "unit": "relative_difference",
+          "source": {
+            "section": "7.2 H1",
+            "pdf_pages": [
+              6
+            ]
+          }
+        }
+      },
+      "caveat": "Below saturation, throughput is arrival-limited; equality does not establish equal maximum capacity."
+    },
+    {
+      "id": "H2",
+      "author_verdict": "mixed",
+      "source": {
+        "section": "7.2 H2",
+        "pdf_pages": [
+          6,
+          7
+        ]
+      },
+      "reported": {
+        "cnp_message_slope": {
+          "value": 1.946,
+          "ci_95": [
+            1.944,
+            1.948
+          ],
+          "unit": "messages_per_task_per_added_agent",
+          "source": {
+            "section": "7.2 H2",
+            "pdf_pages": [
+              6
+            ]
+          }
+        },
+        "cnp_endpoints": [
+          {
+            "workers": 4,
+            "messages_per_task": 7.5
+          },
+          {
+            "workers": 32,
+            "messages_per_task": 62
+          }
+        ],
+        "hive_message_slope": {
+          "value": -0.00013,
+          "ci_95": [
+            -0.00015,
+            -0.00011
+          ],
+          "unit": "messages_per_task_per_added_agent",
+          "source": {
+            "section": "7.2 H2",
+            "pdf_pages": [
+              6,
+              7
+            ]
+          }
+        }
+      },
+      "caveat": "Hive slope is practically tiny but its CI excludes zero, failing the reported registered rule."
+    },
+    {
+      "id": "H3",
+      "author_verdict": "mixed",
+      "source": {
+        "section": "7.2 H3",
+        "pdf_pages": [
+          7
+        ]
+      },
+      "reported": {
+        "hive_retention": {
+          "value": 0.023,
+          "ci_95": [
+            0.022,
+            0.024
+          ],
+          "unit": "throughput_ratio",
+          "source": {
+            "section": "7.2 H3",
+            "pdf_pages": [
+              7
+            ]
+          }
+        },
+        "elected_retention": {
+          "value": 0.996,
+          "ci_95": [
+            0.988,
+            1.003
+          ],
+          "unit": "throughput_ratio",
+          "source": {
+            "section": "7.2 H3",
+            "pdf_pages": [
+              7
+            ]
+          }
+        },
+        "fleet_retention": {
+          "value": 0.941,
+          "ci_95": [
+            0.933,
+            0.95
+          ],
+          "unit": "throughput_ratio",
+          "source": {
+            "section": "7.2 H3",
+            "pdf_pages": [
+              7
+            ]
+          }
+        },
+        "fleet_registered_bounds": [
+          0.6,
+          0.9
+        ],
+        "reported_bounds_holding": 4,
+        "reported_bounds_tested": 5,
+        "capacity_report_period": 10
+      },
+      "caveat": "Fleet exceeds predicted bound favorably because other nodes have spare capacity; this still fails the registered bound."
+    },
+    {
+      "id": "H4",
+      "author_verdict": "mixed",
+      "source": {
+        "section": "7.2 H4",
+        "pdf_pages": [
+          7
+        ]
+      },
+      "reported": {
+        "elected_recovery": {
+          "value": 0.69,
+          "ci_95": [
+            0.55,
+            0.84
+          ],
+          "unit": "simulated_time_unit",
+          "source": {
+            "section": "7.2 H4",
+            "pdf_pages": [
+              7
+            ]
+          }
+        },
+        "elected_registered_maximum": 10,
+        "hive_throughput_recovery_after_restart": 0,
+        "hive_sojourn_loss": {
+          "value": 14,
+          "ci_95": [
+            13.8,
+            14.2
+          ],
+          "unit": "simulated_time_unit",
+          "source": {
+            "section": "7.2 H4",
+            "pdf_pages": [
+              7
+            ]
+          }
+        },
+        "approximate_hive_backlog_clearance": 150
+      },
+      "caveat": "Hive recovery metric misses waiting backlog and fails a requirement for positive recovery time."
+    },
+    {
+      "id": "H5",
+      "author_verdict": "mixed",
+      "source": {
+        "section": "7.2 H5",
+        "pdf_pages": [
+          7
+        ]
+      },
+      "reported": {
+        "latency_condition": 0.5,
+        "cnp_minus_hive_sojourn": {
+          "value": 1.2,
+          "ci_95": [
+            1.02,
+            1.37
+          ],
+          "unit": "simulated_time_unit",
+          "source": {
+            "section": "7.2 H5",
+            "pdf_pages": [
+              7
+            ]
+          }
+        },
+        "low_load_condition": 0.3,
+        "stealing_faster_than_hive": 0.024,
+        "stealing_faster_than_cnp": 1.62
+      },
+      "caveat": "Contract-net comparison holds but work stealing is not slower than both alternatives as predicted."
+    },
+    {
+      "id": "H6",
+      "author_verdict": "holds",
+      "source": {
+        "section": "7.2 H6",
+        "pdf_pages": [
+          8
+        ]
+      },
+      "reported": {
+        "relative_throughput_difference": {
+          "value": 0,
+          "ci_95": [
+            -0.0001,
+            0.0001
+          ],
+          "unit": "relative_difference",
+          "source": {
+            "section": "7.2 H6",
+            "pdf_pages": [
+              8
+            ]
+          }
+        },
+        "hive2_minus_hive_sojourn": {
+          "value": 0.168,
+          "ci_95": [
+            0.166,
+            0.169
+          ],
+          "unit": "simulated_time_unit",
+          "source": {
+            "section": "7.2 H6",
+            "pdf_pages": [
+              8
+            ]
+          }
+        },
+        "two_extra_base_message_legs": 0.1
+      },
+      "caveat": "Applies to the implemented hierarchy and base conditions; longer sojourn includes delayed next dispatch."
+    }
+  ],
+  "unregistered_results": [
+    {
+      "id": "high-latency-dispatch-window",
+      "source": {
+        "section": "7.2 H5 discussion",
+        "pdf_pages": [
+          7
+        ],
+        "correct_figure": 4,
+        "correct_panel": "b",
+        "figure_pdf_page": 8
+      },
+      "condition": {
+        "load": 0.9,
+        "one_way_message_latency": 0.5
+      },
+      "reported": {
+        "hive_sojourn": 40.7,
+        "hive_throughput": 12.37,
+        "cnp_throughput": 15.02
+      },
+      "explanation": "Two-outstanding-task hive dispatch window and round-trip report/assignment delay constrain capacity.",
+      "caveat": "Implementation-sensitive; not an unavoidable property of centralized authority."
+    },
+    {
+      "id": "burst-concurrent-auctions",
+      "source": {
+        "section": "7.2 Not registered: burst allocation",
+        "pdf_pages": [
+          8
+        ],
+        "correct_figure": 5,
+        "figure_pdf_page": 9
+      },
+      "condition": {
+        "tasks_at_time_zero": 400
+      },
+      "reported": {
+        "cnp_makespan": 76.3,
+        "cnp_makespan_ci_95": [
+          73.3,
+          79.3
+        ],
+        "hive_makespan": 28.7,
+        "abstract_rounded_ratio": 2.7
+      },
+      "explanation": "Simultaneous auctions use stale finish-time bids and converge on the same fastest worker.",
+      "caveat": "Does not evaluate reservation-aware or otherwise modified contract-net protocols."
+    },
+    {
+      "id": "stealing-polling-message-cost",
+      "source": {
+        "section": "7.2 H5 discussion",
+        "pdf_pages": [
+          7
+        ]
+      },
+      "reported": [
+        {
+          "load": 0.3,
+          "one_way_message_latency": 0.01,
+          "messages_per_task": 141.9
+        },
+        {
+          "load": 0.9,
+          "one_way_message_latency": 0.5,
+          "messages_per_task": 1.3
+        }
+      ],
+      "explanation": "Idle workers poll repeatedly; a message count has no calibrated token-cost conversion."
+    }
+  ],
+  "source_discrepancies": [
+    {
+      "id": "H2-figure-reference",
+      "type": "cross_reference",
+      "source": {
+        "section": "7.2 H2",
+        "pdf_pages": [
+          6
+        ]
+      },
+      "printed": "Figure 3a",
+      "caption_matching_quantity": "Figure 4a, PDF p.8",
+      "status": "preserved_and_flagged"
+    },
+    {
+      "id": "H5-figure-reference",
+      "type": "cross_reference",
+      "source": {
+        "section": "7.2 H5",
+        "pdf_pages": [
+          7
+        ]
+      },
+      "printed": "Figure 3b",
+      "caption_matching_quantity": "Figure 4b, PDF p.8",
+      "status": "preserved_and_flagged"
+    },
+    {
+      "id": "burst-figure-reference",
+      "type": "cross_reference",
+      "source": {
+        "section": "7.2 burst allocation",
+        "pdf_pages": [
+          8
+        ]
+      },
+      "printed": "Figure 4",
+      "caption_matching_quantity": "Figure 5, PDF p.9",
+      "status": "preserved_and_flagged"
+    }
+  ],
+  "numerical_reading_cautions": [
+    {
+      "type": "compatible_rounding",
+      "description": "Abstract fleet retention 0.94 [0.93, 0.95] rounds H3 0.941 [0.933, 0.950]. Abstract cost 15.4 and slope 1.95 round H1 15.38 and H2 1.946."
+    },
+    {
+      "type": "rounded_table_means",
+      "description": "Ratios and paired differences need not exactly equal calculations from rounded Table 2 means; do not replace printed estimates."
+    },
+    {
+      "type": "ratio_interval",
+      "description": "Retention is a throughput-window ratio, not a bounded probability; reported SWARM-ELECT CI [0.988, 1.003] is retained."
+    },
+    {
+      "type": "different_metric_windows",
+      "description": "Very low hive outage-window throughput and later catch-up coexist; discussion's backlog emphasis does not mean uninterrupted throughput."
+    }
+  ],
+  "limitations": [
+    {
+      "source": {
+        "section": "9",
+        "pdf_pages": [
+          9
+        ]
+      },
+      "text": "No reasoning errors, mandate misunderstandings, or cost of coordinator deliberation."
+    },
+    {
+      "source": {
+        "section": "9",
+        "pdf_pages": [
+          9
+        ]
+      },
+      "text": "Messages are counted without message size or token-cost measurement."
+    },
+    {
+      "source": {
+        "section": "9",
+        "pdf_pages": [
+          9
+        ]
+      },
+      "text": "Base throughput is arrival-limited; it mainly measures cost and latency rather than maximum capacity."
+    },
+    {
+      "source": {
+        "section": "9",
+        "pdf_pages": [
+          9
+        ]
+      },
+      "text": "Fleet rerouting depends on spare capacity; author says load above 0.75 prevents absorbing a full lost node."
+    },
+    {
+      "source": {
+        "section": "9",
+        "pdf_pages": [
+          9
+        ]
+      },
+      "text": "Documentation-based classifications may differ from deployed systems; army classifications rely on doctrine."
+    },
+    {
+      "source": {
+        "section": "Data and code",
+        "pdf_pages": [
+          10
+        ]
+      },
+      "text": "Guide did not run hsf experiments or analysis and does not claim independent verification of raw data, grid, or preregistration history."
+    }
+  ]
+}

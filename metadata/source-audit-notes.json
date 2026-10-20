@@ -1,0 +1,96 @@
+{
+  "inspected_on": "2026-10-20",
+  "audit_kind": "static primary-source reading; no execution or experiment reproduction",
+  "paper": {
+    "landing_url": "https://somewhere.systems/research/hive-swarm-fleet",
+    "pdf_url": "https://somewhere.systems/research/hive-swarm-fleet.pdf",
+    "pages": 11,
+    "bytes": 377437,
+    "sha256": "b1d36d628a4d9c65ec026fc0533a13f9a8300b29067b5b6d5d99348b03bb943e",
+    "attachment_public_binary_equal": true,
+    "license_on_author_landing": "CC-BY-4.0",
+    "version": "Working paper v1",
+    "date": "2026-10-17"
+  },
+  "author_artifacts": {
+    "status": "available from author; no direct artifact download found",
+    "artifacts": [
+      "hsf package",
+      "13,800 per-run results",
+      "PREREGISTRATION.md",
+      "DEVIATIONS.md",
+      "CLASSIFICATION.md",
+      "initial definitions",
+      "archived source conversation"
+    ],
+    "reproduced": false,
+    "contacted_author": false,
+    "searches": [
+      {
+        "query": "user:somewheresy hsf",
+        "matches": 0
+      },
+      {
+        "query": "org:somewheresystems hsf",
+        "matches": 0
+      },
+      {
+        "query": "user:somewheresy hive",
+        "matches": 0
+      },
+      {
+        "query": "org:somewheresystems hive",
+        "matches": 0
+      }
+    ],
+    "search_limit": "Scoped GitHub name/description searches, not proof of global absence"
+  },
+  "inspected_code": [
+    {
+      "repository": "openai/swarm",
+      "path": "swarm/core.py",
+      "commit": "6af0b4caf37dca4526dfd98e9fbd8ce36e7eeb22",
+      "blob": "65dedf1a021f8f23152b5a0c67d9b82509175e50",
+      "supports": "single-active-agent handoff mechanism",
+      "does_not_establish": "deployment authority semantics or resilience"
+    },
+    {
+      "repository": "langchain-ai/langgraph-swarm-py",
+      "path": "langgraph_swarm/swarm.py",
+      "commit": "5442a15cdd0ed210589148900c9960c24c489d04",
+      "blob": "c6b0609e098a0e117eb860eb9890e823f4b4abe2",
+      "supports": "active-agent router and handoff destinations",
+      "does_not_establish": "all customized applications' authority relations"
+    },
+    {
+      "repository": "langchain-ai/langgraph-supervisor-py",
+      "path": "langgraph_supervisor/supervisor.py",
+      "commit": "88859b34017ac3569bbd4a3092c7e77593a0a960",
+      "blob": "3abeb6197c355e4b048c710220008e64903fb8ff",
+      "supports": "central supervisor and return edges with tool-based delegation",
+      "does_not_establish": "whether each application uses execution command or governance"
+    }
+  ],
+  "inspected_documentation": [
+    {
+      "url": "https://docs.crewai.com/v1.15.28/en/concepts/processes",
+      "use": "Sequential task ordering and hierarchical manager allocation"
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "use": "Provider description of lead/subagent research system"
+    },
+    {
+      "url": "https://github.com/langchain-ai/langgraph-supervisor",
+      "redirected_to": "https://github.com/langchain-ai/langgraph-supervisor-py",
+      "use": "Resolve source repository cited by paper"
+    }
+  ],
+  "limitations": [
+    "No hsf code, data or registration history audited",
+    "No installed or deployed framework execution",
+    "Code pins are present inspection snapshots, not paper-version pins",
+    "No exhaustive 22-system independent classification",
+    "No primary reference bibliography-wide validation"
+  ]
+}
