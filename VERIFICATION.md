@@ -25,4 +25,14 @@ Publication verification is recorded below after the exact final tree is pushed.
 
 ## Publication record
 
-Publication checks pending the initial public push. This line is replaced with verified outcomes before completion.
+The repository was published publicly as [0xHayd3n/hive-swarm-fleet-guide](https://github.com/0xHayd3n/hive-swarm-fleet-guide) on 20 October 2026. Duplicate searches for hive, swarm, fleet and Bennington under the owner returned no existing guide; the exact chosen name was also checked before creation.
+
+For initial publication commit `6f6ac63120a95812c25f79ecf3467f4b605204ce`:
+
+- Anonymous GitHub repository API request returned HTTP 200, `private=false`, and default branch `main`; its public branch reference matched the local commit.
+- An unauthenticated commit archive contained exactly the 27 expected tracked files. Every published file matched its local committed blob byte-for-byte. The anonymous raw README request also returned HTTP 200 with identical bytes.
+- Local integrity checks passed: 27 files, 15 claims, 76 local links, 101 source-page links, classification 12/3/7 counts, all Table 2 values and hypothesis verdicts, author/version/hash identity and source-asset exclusions.
+- CITATION.cff passed the official SHA-256-pinned CFF 1.2.0 schema locally and in CI.
+- [GitHub Actions run 39429919284](https://github.com/0xHayd3n/hive-swarm-fleet-guide/actions/runs/39429919284) completed successfully, including both validation scripts.
+
+This verification-record update is committed separately. The release procedure repeats anonymous branch/archive/content comparisons and checks CI for the final pushed revision. The final commit is reported with delivery; [current workflow history](https://github.com/0xHayd3n/hive-swarm-fleet-guide/actions/workflows/validate.yml) remains publicly inspectable. No source PDF, original figure, full extracted text, private Library identifier or transfer credential is tracked.
